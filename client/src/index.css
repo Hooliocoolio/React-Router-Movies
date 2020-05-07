@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Francois+One|Luckiest+Guy|Sigmar+One&display=swap');
+
+/* 
+font-family: 'Acme', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Sigmar One', cursive; 
+*/
+
+
 body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f2f2f2;
+  background-color:  black;
+  max-width: 75%;
 }
 
 .movie-card {
@@ -18,7 +29,8 @@ body {
 
 .movie-director {
   padding: 4px 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Acme', sans-serif;
 }
 
 .saved-list {
@@ -34,26 +46,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: darkslategrey;
 }
 
 .saved-list h3 {
   margin-right: 10px;
+  font-family: 'Sigmar One', cursive; 
 }
 
 .saved-movie {
   margin: 0 10px;
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  
 }
 .saved-active {
+  border: 5px solid purple;
   color: blue;
   border: 1px solid grey;
   padding: 5px;
 }
 .save-wrapper {
+  border: 5px solid navy;
   position: relative;
   width: 75%;
   margin: 1rem auto;
 }
 .save-button {
+  border: 5px solid green;
   position: absolute;
   top: 25px;
   right: 25px;
@@ -62,11 +83,19 @@ body {
   background-color: lightseagreen;
 }
 .save-button:hover {
+  border: 5px solid orange;
   background-color: green;
   color: white;
 }
 
 .home-button {
+  border: 5px solid yellow;
   padding: 5px 10px;
   background-color: lightskyblue;
+}
+
+a {
+  text-decoration:none;
+  color: deeppink;
+ 
 }
