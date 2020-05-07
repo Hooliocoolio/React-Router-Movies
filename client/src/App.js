@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import MovieList from "./Movies/MovieList";
@@ -10,11 +11,11 @@ const App = () => {
 
   const addToSavedList = movie => {
     setSavedList([...savedList, movie]);
-    const id = movie.id;
+
   };
   return (
     <div>
-      <SavedList list={savedList} id={'${id}'} />
+      <SavedList list={savedList} />
       <Route exact path="/"><MovieList /></Route>
       <Route path="/movie/:id"><Movie add={addToSavedList} /></Route>
     </div>

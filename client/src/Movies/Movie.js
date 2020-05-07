@@ -7,9 +7,6 @@ const Movie = props => {
   let { id } = useParams();
 
   useEffect(() => {
-      // change ^^^ that line and grab the id from the URL
-    // You will NEED to add a dependency array to this effect hook
-
     axios
       .get(`http://localhost:5000/api/movies/${id}`)
       .then(response => {
@@ -21,27 +18,28 @@ const Movie = props => {
   }, [id]);
 
   // Uncomment this only when you have moved on to the stretch goals
-  const saveMovie = () => {
-    const addToSavedList = props.addToSavedList;
-    addToSavedList(movie)
-  }
+  // const saveMovie = () => {
+  //   const addToSavedList = props.addToSavedList;
+  //   addToSavedList(movie)
+  // }
 
   if (!movie) {
-    return <div>Loading movie information...</div>;
+    return <div></div>;
   }
 
   const { title, director, metascore, stars } = movie;
   return (
     <div className="save-wrapper">
       <div className="movie-card">
-        <h2>{title}</h2>
+        <h1 className="filmTitle">{title}</h1>
+        
         <div className="movie-director">
           Director: <em>{director}</em>
         </div>
         <div className="movie-metascore">
           Metascore: <strong>{metascore}</strong>
         </div>
-        <h3>Actors</h3>
+        <h2>Cast</h2>
 
         {stars.map(star => (
           <div key={star} className="movie-star">
