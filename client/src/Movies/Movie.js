@@ -3,19 +3,19 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const Movie = props => {
-  const [movie, setMovie] = useState(null);
-  let { id } = useParams();
+      const [movie, setMovie] = useState(null);
+                   let { id } = useParams();
 
   useEffect(() => {
     axios
       .get(`http://localhost:5000/api/movies/${id}`)
       .then(response => {
-        setMovie(response.data);
+            setMovie(response.data);
       })
       .catch(error => {
-        console.error(error);
+             console.error(error);
       });
-  }, [id]);
+      },[id]);
 
   // Uncomment this only when you have moved on to the stretch goals
   // const saveMovie = () => {
@@ -24,7 +24,7 @@ const Movie = props => {
   // }
 
   if (!movie) {
-    return <div></div>;
+      return <div></div>;
   }
 
   const { title, director, metascore, stars } = movie;
