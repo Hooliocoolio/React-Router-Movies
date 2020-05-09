@@ -3,8 +3,6 @@ import { useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 
-
-
 const SavedList = props => {
   let history = useHistory();
 
@@ -13,6 +11,7 @@ const SavedList = props => {
   }
   return (
     <div className="saved-list">
+      
       <h3>Saved Movies:</h3>
       {props.list.map(movie => (
         <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
